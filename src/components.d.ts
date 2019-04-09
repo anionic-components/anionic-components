@@ -13,57 +13,50 @@ import '@stencil/core';
 export namespace Components {
 
   interface AnionChipBar {
+    /**
+    * Add a chip to the bar.
+    */
     'addChip': (chipText: string) => Promise<void>;
+    /**
+    * The name of the color applied to chips - e.g., 'primary'.
+    */
     'chipColor': string;
+    /**
+    * Remove all chips from the bar.
+    */
     'clearChips': () => Promise<void>;
+    /**
+    * Get the chips currently in the bar.
+    */
     'getChips': () => Promise<string[]>;
+    /**
+    * Remove a chip from the bar.
+    */
     'removeChip': (chipText: string) => Promise<void>;
+    /**
+    * Set the chips in the bar. Note: any existing chips are cleared first.
+    */
     'setChips': (chips: string[]) => Promise<void>;
   }
   interface AnionChipBarAttributes extends StencilHTMLAttributes {
+    /**
+    * The name of the color applied to chips - e.g., 'primary'.
+    */
     'chipColor'?: string;
+    /**
+    * Emitted when a chip is removed.
+    */
     'onAnionChipRemoved'?: (event: CustomEvent) => void;
-  }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AnionChipBar': Components.AnionChipBar;
-    'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
     'anion-chip-bar': Components.AnionChipBarAttributes;
-    'my-component': Components.MyComponentAttributes;
   }
 
 
@@ -73,20 +66,12 @@ declare global {
     new (): HTMLAnionChipBarElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
   interface HTMLElementTagNameMap {
     'anion-chip-bar': HTMLAnionChipBarElement
-    'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
     'anion-chip-bar': HTMLAnionChipBarElement;
-    'my-component': HTMLMyComponentElement;
   }
 
 

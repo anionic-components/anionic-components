@@ -7,12 +7,22 @@ import { Component, Event, EventEmitter, Method, Prop, State } from "@stencil/co
 })
 export class AnionChipBar {
 
+  /**
+   * Emitted when a chip is removed.
+   */
   @Event() anionChipRemoved: EventEmitter;
 
+  /**
+   * The name of the color applied to chips - e.g., 'primary'. 
+   */
   @Prop() chipColor: string = 'primary';
 
   @State() chips: string[] = [];
 
+  /**
+   * Add a chip to the bar.
+   * @param chipText The text that will appear in the chip.
+   */
   @Method()
   async addChip(chipText: string) {
 
@@ -21,12 +31,19 @@ export class AnionChipBar {
     this.chips = [...this.chips, chipText];
   }
 
+  /**
+   * Get the chips currently in the bar.
+   */
   @Method() 
   async getChips() {
 
     return this.chips;
   }
 
+  /**
+   * Set the chips in the bar.
+   * Note: any existing chips are cleared first.
+   */
   @Method()
   async setChips(chips: string[]) {
 
@@ -34,6 +51,10 @@ export class AnionChipBar {
     chips.map(chip => this.addChip(chip));
   }
 
+  /**
+   * Remove a chip from the bar.
+   * @param chipText The text of the chip to remove.
+   */
   @Method()
   async removeChip(chipText: string) {
 
@@ -48,6 +69,9 @@ export class AnionChipBar {
     });
   }
 
+  /**
+   * Remove all chips from the bar.
+   */
   @Method()
   async clearChips() {
 

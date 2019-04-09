@@ -1,0 +1,50 @@
+{
+  "name": "anionic-components",
+  "version": "0.9.0",
+  "description": "Anionic Components",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/ionic.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@ionic/core": "4.2.0"
+  },
+  "devDependencies": {
+    "@stencil/core": "~0.18.1",
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anionic-components/anionic-components.git"
+  },
+  "license": "MIT",
+  "author": "Geoffrey Rodgers",
+  "bugs": {
+    "url": "https://github.com/anionic-components/anionic-components"
+  },
+  "homepage": "https://github.com/anionic-components/anionic-components",
+  "jest": {
+    "transform": {
+      "^.+\\.(js|ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}

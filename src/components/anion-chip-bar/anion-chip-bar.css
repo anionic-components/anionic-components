@@ -1,0 +1,13 @@
+.anion-chip-bar {
+  padding: 5px;
+  max-height: 138px;
+  overflow: auto;
+}
+
+.anion-chip-bar ion-icon {
+  opacity: .3;
+}
+
+.anion-chip-bar ion-icon:hover {
+  opacity: 1;
+}

@@ -14,7 +14,31 @@ Stencil combines the best concepts of the most popular frontend frameworks into 
 
 Stencil components are just Web Components, so they work in any major framework or with no framework at all.
 
-## Getting Started
+## Using the Components
+
+### Option 1 - HTML Tag
+
+Add the `anionic-components` script tag to your `index.html`:
+
+```html
+<script src="https://unpkg.com/anionic-components/dist/anionic.js"></script>
+```
+
+### Option 2 - Framework/Stencil
+
+Add `anionic-components` to your project:
+
+```
+npm install --save anionic-components
+```
+
+Import `anionic-components` in your `index.js` or similar file:
+
+```
+import 'anionic-components';
+```
+
+## Local Development
 
 If you want to change anything about these components or the library in general, clone this repo to a new directory:
 

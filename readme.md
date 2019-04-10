@@ -6,6 +6,11 @@ Anionic components is a library of web components built using Ionic UI component
 
 The library itself is built using Stencil.
 
+## Component List
+
+* [Chip Bar](src/components/anion-chip-bar/readme.md)
+* [Chip Searchbar](src/components/anion-chip-searchbar/readme.md)
+
 # Stencil
 
 Stencil is a compiler for building fast web apps using Web Components.

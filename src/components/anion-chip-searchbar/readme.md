@@ -59,13 +59,13 @@ Type: `Promise<void>`
 
 
 
-### `getChips() => Promise<any>`
+### `getChips() => Promise<string[]>`
 
 Get the chips current in the bar.
 
 #### Returns
 
-Type: `Promise<any>`
+Type: `Promise<string[]>`
 
 
 

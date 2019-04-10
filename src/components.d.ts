@@ -69,7 +69,7 @@ export namespace Components {
     /**
     * Get the chips current in the bar.
     */
-    'getChips': () => Promise<any>;
+    'getChips': () => Promise<string[]>;
     /**
     * The placeholder text of the input element.
     */

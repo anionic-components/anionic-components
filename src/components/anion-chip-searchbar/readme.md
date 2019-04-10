@@ -1,6 +1,6 @@
 # anion-chip-searchbar
 
-Chip Searchbar is a combination of a `Chip Bar` component with an input field that can be used as a search field.
+Chip Searchbar is a combination of a `anion-chip-bar` component with an input field that can be used as a search field.
 
 
 <!-- Auto Generated Below -->

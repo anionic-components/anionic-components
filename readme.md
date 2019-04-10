@@ -16,7 +16,7 @@ Stencil components are just Web Components, so they work in any major framework 
 
 ## Using the Components
 
-### Option 1 - HTML Tag
+### Installation Option 1 - HTML Tag
 
 Add the `anionic-components` script tag to your `index.html`:
 
@@ -24,7 +24,7 @@ Add the `anionic-components` script tag to your `index.html`:
 <script src="https://unpkg.com/anionic-components/dist/anionic.js"></script>
 ```
 
-### Option 2 - Framework/Stencil
+### Installation Option 2 - Framework/Stencil
 
 Add `anionic-components` to your project:
 
@@ -36,6 +36,22 @@ Import `anionic-components` in your `index.js` or similar file:
 
 ```
 import 'anionic-components';
+```
+
+### Basic Usage
+
+This is an example from a "field selector modal" component in a Stencil project using Ionic components:
+
+```
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>Select Field/s</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <anion-chip-searchbar chip-color='secondary' labelText='Selected fields'
+                          onAnionInputChange={(e)=>this.handleAnionInputChange(e)}/>
+  </ion-toolbar>
+</ion-header>
 ```
 
 ## Local Development

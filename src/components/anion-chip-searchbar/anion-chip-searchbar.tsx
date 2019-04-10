@@ -56,7 +56,7 @@ export class AnionChipSearchbar {
    * Get the chips current in the bar.
    */
   @Method()
-  async getChips() {
+  async getChips() : Promise<string[]> {
 
     return await this.anionChipBarElem.getChips();
   }

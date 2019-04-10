@@ -1,0 +1,23 @@
+.anion-chip-searchbar {
+  min-height: 65px;
+}
+
+.anion-chip-searchbar-label {
+  font-size: 12.8px;
+  padding: 3px;
+}
+
+.anion-chip-searchbar-input-wrapper {
+  padding: 5px;
+  max-height: 135px;
+  overflow: auto;
+}
+
+.anion-chip-searchbar-input-wrapper input {
+  border: none;
+  padding: 5px;
+}
+
+.anion-chip-searchbar-input-wrapper input:focus {
+  outline-width: 0;
+}

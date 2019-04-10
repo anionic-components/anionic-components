@@ -43,12 +43,13 @@ export class AnionChipBar {
   /**
    * Set the chips in the bar.
    * Note: any existing chips are cleared first.
+   * @param chipTexts String array of text values for chips.
    */
   @Method()
-  async setChips(chips: string[]) {
+  async setChips(chipTexts: string[]) {
 
     this.clearChips();
-    chips.map(chip => this.addChip(chip));
+    chipTexts.map(chip => this.addChip(chip));
   }
 
   /**

@@ -1,5 +1,5 @@
 {
-  "name": "@anionic/anionic-components",
+  "name": "anionic-components",
   "version": "0.9.0",
   "description": "Anionic Components",
   "module": "dist/esm/index.js",

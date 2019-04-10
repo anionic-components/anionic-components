@@ -36,7 +36,7 @@ export namespace Components {
     /**
     * Set the chips in the bar. Note: any existing chips are cleared first.
     */
-    'setChips': (chips: string[]) => Promise<void>;
+    'setChips': (chipTexts: string[]) => Promise<void>;
   }
   interface AnionChipBarAttributes extends StencilHTMLAttributes {
     /**
@@ -48,15 +48,78 @@ export namespace Components {
     */
     'onAnionChipRemoved'?: (event: CustomEvent) => void;
   }
+
+  interface AnionChipSearchbar {
+    /**
+    * Add a chip to the bar.
+    */
+    'addChip': (chipText: string) => Promise<void>;
+    /**
+    * The name of the color applied to chips - e.g., 'primary'.
+    */
+    'chipColor': string;
+    /**
+    * Remove all chips from the bar.
+    */
+    'clearChips': () => Promise<void>;
+    /**
+    * Clear the text of the input element.
+    */
+    'clearText': () => Promise<void>;
+    /**
+    * Get the chips current in the bar.
+    */
+    'getChips': () => Promise<any>;
+    /**
+    * The placeholder text of the input element.
+    */
+    'inputPlaceholder': string;
+    /**
+    * The text of the associated searchbar label.
+    */
+    'labelText': string;
+    /**
+    * Remove a chip from the bar.
+    */
+    'removeChip': (chipText: string) => Promise<void>;
+    /**
+    * Set the chips in the bar. Note: any existing chips are cleared first.
+    */
+    'setChips': (chipTexts: string[]) => Promise<void>;
+    /**
+    * Set focus on the input element.
+    */
+    'setFocus': () => Promise<void>;
+  }
+  interface AnionChipSearchbarAttributes extends StencilHTMLAttributes {
+    /**
+    * The name of the color applied to chips - e.g., 'primary'.
+    */
+    'chipColor'?: string;
+    /**
+    * The placeholder text of the input element.
+    */
+    'inputPlaceholder'?: string;
+    /**
+    * The text of the associated searchbar label.
+    */
+    'labelText'?: string;
+    /**
+    * Emitted when the value of the input element is changed.
+    */
+    'onAnionInputChange'?: (event: CustomEvent) => void;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AnionChipBar': Components.AnionChipBar;
+    'AnionChipSearchbar': Components.AnionChipSearchbar;
   }
 
   interface StencilIntrinsicElements {
     'anion-chip-bar': Components.AnionChipBarAttributes;
+    'anion-chip-searchbar': Components.AnionChipSearchbarAttributes;
   }
 
 
@@ -66,12 +129,20 @@ declare global {
     new (): HTMLAnionChipBarElement;
   };
 
+  interface HTMLAnionChipSearchbarElement extends Components.AnionChipSearchbar, HTMLStencilElement {}
+  var HTMLAnionChipSearchbarElement: {
+    prototype: HTMLAnionChipSearchbarElement;
+    new (): HTMLAnionChipSearchbarElement;
+  };
+
   interface HTMLElementTagNameMap {
     'anion-chip-bar': HTMLAnionChipBarElement
+    'anion-chip-searchbar': HTMLAnionChipSearchbarElement
   }
 
   interface ElementTagNameMap {
     'anion-chip-bar': HTMLAnionChipBarElement;
+    'anion-chip-searchbar': HTMLAnionChipSearchbarElement;
   }
 
 

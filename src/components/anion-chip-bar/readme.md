@@ -2,12 +2,8 @@
 
 Chip Bar is a visual collection of `ion-chip` components with a button that allows individual chips to be removed from the bar.
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="gopherrdiggs" data-slug-hash="JVNBwX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Anionic Chip Bar">
-  <span>See the Pen <a href="https://codepen.io/gopherrdiggs/pen/JVNBwX/">
-  Anionic Chip Bar</a> by Geoffrey (<a href="https://codepen.io/gopherrdiggs">@gopherrdiggs</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+![Example](images/anionic-chip-bar-example.png)
+[Click this link to go to CodePen example](https://codepen.io/gopherrdiggs/pen/JVNBwX?editors=1011)
 
 
 <!-- Auto Generated Below -->

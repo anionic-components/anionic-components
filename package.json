@@ -2,9 +2,12 @@
   "name": "anionic-components",
   "version": "0.10.6",
   "description": "Anionic Components",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.mjs",
   "main": "dist/index.js",
   "unpkg": "dist/anionic.js",
+  "es2015": "dist/esm/index.mjs.js",
+  "es2017": "dist/esm/index.mjs.js",
+  "jsnext:main": "dist/esm/index.mjs.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
@@ -21,7 +24,7 @@
     "@ionic/core": "4.2.0"
   },
   "devDependencies": {
-    "@stencil/core": "0.18.0",
+    "@stencil/core": "^1.0.0-alpha.8",
     "@types/jest": "^24.0.11",
     "jest": "^24.7.1"
   },

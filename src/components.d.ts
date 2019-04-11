@@ -5,22 +5,16 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import { JSX } from '@stencil/core';
 
 
 export namespace Components {
-
   interface AnionChipBar {
     /**
     * Add a chip to the bar.
     */
     'addChip': (chipText: string) => Promise<void>;
-    /**
-    * The name of the color applied to chips - e.g., 'primary'.
-    */
-    'chipColor': string;
     /**
     * Remove all chips from the bar.
     */
@@ -42,30 +36,11 @@ export namespace Components {
     */
     'setChips': (chipTexts: string[]) => Promise<void>;
   }
-  interface AnionChipBarAttributes extends StencilHTMLAttributes {
-    /**
-    * The name of the color applied to chips - e.g., 'primary'.
-    */
-    'chipColor'?: string;
-    /**
-    * Default set of chips to appear in the bar.
-    */
-    'defaultChips'?: string;
-    /**
-    * Emitted when a chip is removed.
-    */
-    'onAnionChipRemoved'?: (event: CustomEvent) => void;
-  }
-
   interface AnionChipSearchbar {
     /**
     * Add a chip to the bar.
     */
     'addChip': (chipText: string) => Promise<void>;
-    /**
-    * The name of the color applied to chips - e.g., 'primary'.
-    */
-    'chipColor': string;
     /**
     * Remove all chips from the bar.
     */
@@ -99,11 +74,20 @@ export namespace Components {
     */
     'setFocus': () => Promise<void>;
   }
-  interface AnionChipSearchbarAttributes extends StencilHTMLAttributes {
+}
+
+declare namespace LocalJSX {
+  interface AnionChipBar extends JSXBase.HTMLAttributes {
     /**
-    * The name of the color applied to chips - e.g., 'primary'.
+    * Default set of chips to appear in the bar.
     */
-    'chipColor'?: string;
+    'defaultChips'?: string;
+    /**
+    * Emitted when a chip is removed.
+    */
+    'onAnionChipRemoved'?: (event: CustomEvent<any>) => void;
+  }
+  interface AnionChipSearchbar extends JSXBase.HTMLAttributes {
     /**
     * The placeholder text of the input element.
     */
@@ -115,20 +99,29 @@ export namespace Components {
     /**
     * Emitted when the value of the input element is changed.
     */
-    'onAnionInputChange'?: (event: CustomEvent) => void;
+    'onAnionInputChange'?: (event: CustomEvent<any>) => void;
   }
-}
 
-declare global {
-  interface StencilElementInterfaces {
+  interface ElementInterfaces {
     'AnionChipBar': Components.AnionChipBar;
     'AnionChipSearchbar': Components.AnionChipSearchbar;
   }
 
-  interface StencilIntrinsicElements {
-    'anion-chip-bar': Components.AnionChipBarAttributes;
-    'anion-chip-searchbar': Components.AnionChipSearchbarAttributes;
+  interface IntrinsicElements {
+    'AnionChipBar': LocalJSX.AnionChipBar;
+    'AnionChipSearchbar': LocalJSX.AnionChipSearchbar;
   }
+}
+export { LocalJSX as JSX };
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+declare global {
 
 
   interface HTMLAnionChipBarElement extends Components.AnionChipBar, HTMLStencilElement {}
@@ -142,7 +135,6 @@ declare global {
     prototype: HTMLAnionChipSearchbarElement;
     new (): HTMLAnionChipSearchbarElement;
   };
-
   interface HTMLElementTagNameMap {
     'anion-chip-bar': HTMLAnionChipBarElement
     'anion-chip-searchbar': HTMLAnionChipSearchbarElement
@@ -152,14 +144,5 @@ declare global {
     'anion-chip-bar': HTMLAnionChipBarElement;
     'anion-chip-searchbar': HTMLAnionChipSearchbarElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+

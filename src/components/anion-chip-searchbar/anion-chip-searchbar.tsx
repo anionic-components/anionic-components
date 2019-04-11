@@ -1,8 +1,9 @@
-import { Component, Element, Event, EventEmitter, Method, Prop, State } from "@stencil/core";
+import { h, Component, Element, Event, EventEmitter, Method, Prop, State } from "@stencil/core";
 
 @Component({
   tag: 'anion-chip-searchbar',
-  styleUrl: 'anion-chip-searchbar.css'
+  styleUrl: 'anion-chip-searchbar.css',
+  shadow: false
 })
 /**
    * slot 'end' - Content is placed to the right of the item text in LTR, and to the left in RTL.
@@ -16,11 +17,6 @@ export class AnionChipSearchbar {
    */
   @Event() anionInputChange: EventEmitter;
   
-  /**
-   * The name of the color applied to chips - e.g., 'primary'. 
-   */
-  @Prop() chipColor: string = 'primary';
-
   /**
    * The text of the associated searchbar label.
    */
@@ -132,8 +128,9 @@ export class AnionChipSearchbar {
         }
         <div class='anion-chip-searchbar-input-wrapper' 
              onClick={()=>this.handleContainerClick()}>
-          <anion-chip-bar chip-color={this.chipColor} />
-          <input type="text" placeholder={this.inputPlaceholder} 
+          <anion-chip-bar />
+          <input type="text" 
+                 placeholder={this.inputPlaceholder} 
                  onInput={(e)=>this.handleInput(e)}/>
           <slot name="end"></slot>
         </div>

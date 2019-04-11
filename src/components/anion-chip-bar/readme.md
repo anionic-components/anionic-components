@@ -4,7 +4,7 @@ Chip Bar is a visual collection of `ion-chip` components with a button that allo
 
 ![Example](../../../images/anionic-chip-bar-example.png)
 
-[Click this link to go to CodePen example](https://codepen.io/gopherrdiggs/pen/JVNBwX?editors=1011)
+[Click this link to go to CodePen example](https://codepen.io/gopherrdiggs/pen/JVNBwX)
 
 
 <!-- Auto Generated Below -->

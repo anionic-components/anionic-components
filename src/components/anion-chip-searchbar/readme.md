@@ -2,6 +2,10 @@
 
 Chip Searchbar is a combination of a `anion-chip-bar` component with an input field that can be used as a search field.
 
+![Example](../../../images/anionic-chip-searchbar-example.png)
+
+[Click this link to go to CodePen example](https://codepen.io/gopherrdiggs/pen/wZdOOX)
+
 
 <!-- Auto Generated Below -->
 

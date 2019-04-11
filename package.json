@@ -1,6 +1,6 @@
 {
   "name": "anionic-components",
-  "version": "0.10.1",
+  "version": "0.10.5",
   "description": "Anionic Components",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "@ionic/core": "4.2.0"
   },
   "devDependencies": {
-    "@stencil/core": "~0.18.1",
+    "@stencil/core": "0.18.0",
     "@types/jest": "^24.0.11",
     "jest": "^24.7.1"
   },

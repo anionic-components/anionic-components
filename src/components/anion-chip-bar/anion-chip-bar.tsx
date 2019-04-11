@@ -16,6 +16,11 @@ export class AnionChipBar {
    */
   @Prop() chipColor: string = 'primary';
 
+  /**
+   * Default set of chips to appear in the bar.
+   */
+  @Prop() defaultChips: string;
+
   @State() chips: string[] = [];
 
   /**
@@ -76,6 +81,16 @@ export class AnionChipBar {
   async clearChips() {
 
     this.chips = [];
+  }
+
+  async componentWillLoad() {
+
+    if (this.defaultChips) {
+      let defaults = this.defaultChips.split(',');
+      for (let i = 0; i < defaults.length; i++) {
+        await this.addChip(defaults[i]);
+      }
+    }
   }
 
   private async handleChipCloseClick(chipText: string) {

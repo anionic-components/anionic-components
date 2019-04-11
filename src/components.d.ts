@@ -26,6 +26,10 @@ export namespace Components {
     */
     'clearChips': () => Promise<void>;
     /**
+    * Default set of chips to appear in the bar.
+    */
+    'defaultChips': string;
+    /**
     * Get the chips currently in the bar.
     */
     'getChips': () => Promise<string[]>;
@@ -43,6 +47,10 @@ export namespace Components {
     * The name of the color applied to chips - e.g., 'primary'.
     */
     'chipColor'?: string;
+    /**
+    * Default set of chips to appear in the bar.
+    */
+    'defaultChips'?: string;
     /**
     * Emitted when a chip is removed.
     */

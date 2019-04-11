@@ -2,8 +2,7 @@ import { Component, Event, EventEmitter, Method, Prop, State } from "@stencil/co
 
 @Component({
   tag: 'anion-chip-bar',
-  styleUrl: 'anion-chip-bar.css',
-  shadow: true
+  styleUrl: 'anion-chip-bar.css'
 })
 export class AnionChipBar {
 

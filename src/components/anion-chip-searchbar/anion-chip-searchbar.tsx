@@ -132,7 +132,7 @@ export class AnionChipSearchbar {
         }
         <div class='anion-chip-searchbar-input-wrapper' 
              onClick={()=>this.handleContainerClick()}>
-          <anion-chip-bar chipColor={this.chipColor} />
+          <anion-chip-bar chip-color={this.chipColor} />
           <input type="text" placeholder={this.inputPlaceholder} 
                  onInput={(e)=>this.handleInput(e)}/>
           <slot name="end"></slot>

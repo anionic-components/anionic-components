@@ -2,9 +2,9 @@
 
 # Anionic Components
 
-Anionic components is a library of web components built using Ionic UI components. 
+Anionic components is a library of web components built using [Ionic UI components](https://ionicframework.com/docs/components/). 
 
-The library itself is built using Stencil.
+The library itself is built using [Stencil](https://stenciljs.com/).
 
 ## Component List
 

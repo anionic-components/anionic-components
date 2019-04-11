@@ -1,0 +1,23 @@
+.anion-chip-inputbar {
+  min-height: 65px;
+}
+
+.anion-chip-inputbar-label {
+  font-size: 12.8px;
+  padding: 3px;
+}
+
+.anion-chip-inputbar-input-wrapper {
+  padding: 5px;
+  max-height: 135px;
+  overflow: auto;
+}
+
+.anion-chip-inputbar-input-wrapper input {
+  border: none;
+  padding: 5px;
+}
+
+.anion-chip-inputbar-input-wrapper input:focus {
+  outline-width: 0;
+}

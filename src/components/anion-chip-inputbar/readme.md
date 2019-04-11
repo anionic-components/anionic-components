@@ -1,8 +1,8 @@
-# anion-chip-searchbar
+# anion-chip-inputbar
 
-Chip Searchbar is a combination of a `anion-chip-bar` component with an input field that can be used as a search field.
+Chip Inputbar is a combination of a `anion-chip-bar` component with an input field that can be used as a search field, as an example.
 
-![Example](../../../images/anionic-chip-searchbar-example.png)
+![Example](../../../images/anionic-chip-inputbar-example.png)
 
 [Click this link to go to CodePen example](https://codepen.io/gopherrdiggs/pen/wZdOOX)
 
@@ -12,11 +12,10 @@ Chip Searchbar is a combination of a `anion-chip-bar` component with an input fi
 
 ## Properties
 
-| Property           | Attribute           | Description                                               | Type     | Default            |
-| ------------------ | ------------------- | --------------------------------------------------------- | -------- | ------------------ |
-| `chipColor`        | `chip-color`        | The name of the color applied to chips - e.g., 'primary'. | `string` | `'primary'`        |
-| `inputPlaceholder` | `input-placeholder` | The placeholder text of the input element.                | `string` | `'Type to search'` |
-| `labelText`        | `label-text`        | The text of the associated searchbar label.               | `string` | `undefined`        |
+| Property           | Attribute           | Description                                | Type     | Default     |
+| ------------------ | ------------------- | ------------------------------------------ | -------- | ----------- |
+| `inputPlaceholder` | `input-placeholder` | The placeholder text of the input element. | `string` | `undefined` |
+| `labelText`        | `label-text`        | The text of the associated inputbar label. | `string` | `undefined` |
 
 
 ## Events

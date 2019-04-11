@@ -2,7 +2,8 @@ import { Component, Event, EventEmitter, Method, Prop, State } from "@stencil/co
 
 @Component({
   tag: 'anion-chip-bar',
-  styleUrl: 'anion-chip-bar.css'
+  styleUrl: 'anion-chip-bar.css',
+  shadow: false
 })
 export class AnionChipBar {
 
@@ -10,11 +11,6 @@ export class AnionChipBar {
    * Emitted when a chip is removed.
    */
   @Event() anionChipRemoved: EventEmitter;
-
-  /**
-   * The name of the color applied to chips - e.g., 'primary'. 
-   */
-  @Prop() chipColor: string = 'primary';
 
   /**
    * Default set of chips to appear in the bar.
@@ -102,7 +98,7 @@ export class AnionChipBar {
     return [
       <div class='anion-chip-bar'>
         { this.chips.map(chip =>
-          <ion-chip color={this.chipColor}>
+          <ion-chip>
             <ion-label>{chip}</ion-label>
             <ion-icon name='close'
                       onClick={()=>this.handleChipCloseClick(chip)} />

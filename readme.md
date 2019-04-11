@@ -9,7 +9,7 @@ The library itself is built using [Stencil](https://stenciljs.com/).
 ## Component List
 
 * [Chip Bar](src/components/anion-chip-bar/readme.md)
-* [Chip Searchbar](src/components/anion-chip-searchbar/readme.md)
+* [Chip Inputbar](src/components/anion-chip-inputbar/readme.md)
 
 # Stencil
 
@@ -53,7 +53,7 @@ This is an example from a "field selector modal" component in a Stencil project 
     <ion-title>Select Field/s</ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <anion-chip-searchbar chip-color='secondary' labelText='Selected fields'
+    <anion-chip-inputbar chip-color='secondary' labelText='Selected fields'
                           onAnionInputChange={(e)=>this.handleAnionInputChange(e)}/>
   </ion-toolbar>
 </ion-header>

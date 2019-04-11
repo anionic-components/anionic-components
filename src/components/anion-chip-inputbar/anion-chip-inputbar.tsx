@@ -1,15 +1,16 @@
 import { Component, Element, Event, EventEmitter, Method, Prop, State } from "@stencil/core";
 
 @Component({
-  tag: 'anion-chip-searchbar',
-  styleUrl: 'anion-chip-searchbar.css'
+  tag: 'anion-chip-inputbar',
+  styleUrl: 'anion-chip-inputbar.css',
+  shadow: false
 })
 /**
    * slot 'end' - Content is placed to the right of the item text in LTR, and to the left in RTL.
    */
-export class AnionChipSearchbar {
+export class AnionChipInputbar {
 
-  @Element() el: HTMLAnionChipSearchbarElement;
+  @Element() el: HTMLAnionChipInputbarElement;
 
   /**
    * Emitted when the value of the input element is changed.
@@ -17,19 +18,14 @@ export class AnionChipSearchbar {
   @Event() anionInputChange: EventEmitter;
   
   /**
-   * The name of the color applied to chips - e.g., 'primary'. 
-   */
-  @Prop() chipColor: string = 'primary';
-
-  /**
-   * The text of the associated searchbar label.
+   * The text of the associated inputbar label.
    */
   @Prop() labelText: string;
 
   /**
    * The placeholder text of the input element.
    */
-  @Prop() inputPlaceholder: string = 'Type to search';
+  @Prop() inputPlaceholder: string;
 
   @State() chips: string[] = [];
 
@@ -124,16 +120,17 @@ export class AnionChipSearchbar {
 
   render() {
     return [
-      <div class='anion-chip-searchbar'>
+      <div class='anion-chip-inputbar'>
         { this.labelText &&
-          <ion-label class='anion-chip-searchbar-label'>
+          <ion-label class='anion-chip-inputbar-label'>
             {this.labelText}
           </ion-label>
         }
-        <div class='anion-chip-searchbar-input-wrapper' 
+        <div class='anion-chip-inputbar-input-wrapper' 
              onClick={()=>this.handleContainerClick()}>
-          <anion-chip-bar chip-color={this.chipColor} />
-          <input type="text" placeholder={this.inputPlaceholder} 
+          <anion-chip-bar />
+          <input type="text" 
+                 placeholder={this.inputPlaceholder ? this.inputPlaceholder : ''} 
                  onInput={(e)=>this.handleInput(e)}/>
           <slot name="end"></slot>
         </div>

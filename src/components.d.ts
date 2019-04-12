@@ -19,6 +19,10 @@ export namespace Components {
     */
     'addChip': (chipText: string) => Promise<void>;
     /**
+    * Color name of the ion-chip components.
+    */
+    'chipColor': string;
+    /**
     * Remove all chips from the bar.
     */
     'clearChips': () => Promise<void>;
@@ -41,6 +45,10 @@ export namespace Components {
   }
   interface AnionChipBarAttributes extends StencilHTMLAttributes {
     /**
+    * Color name of the ion-chip components.
+    */
+    'chipColor'?: string;
+    /**
     * Default set of chips to appear in the bar.
     */
     'defaultChips'?: string;
@@ -55,6 +63,10 @@ export namespace Components {
     * Add a chip to the bar.
     */
     'addChip': (chipText: string) => Promise<void>;
+    /**
+    * Color name of the ion-chip components.
+    */
+    'chipColor': string;
     /**
     * Remove all chips from the bar.
     */
@@ -89,6 +101,10 @@ export namespace Components {
     'setFocus': () => Promise<void>;
   }
   interface AnionChipInputbarAttributes extends StencilHTMLAttributes {
+    /**
+    * Color name of the ion-chip components.
+    */
+    'chipColor'?: string;
     /**
     * The placeholder text of the input element.
     */

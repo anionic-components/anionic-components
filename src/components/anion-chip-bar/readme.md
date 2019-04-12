@@ -14,6 +14,7 @@ Chip Bar is a visual collection of `ion-chip` components with a button that allo
 
 | Property       | Attribute       | Description                                | Type     | Default     |
 | -------------- | --------------- | ------------------------------------------ | -------- | ----------- |
+| `chipColor`    | `chip-color`    | Color name of the ion-chip components.     | `string` | `'primary'` |
 | `defaultChips` | `default-chips` | Default set of chips to appear in the bar. | `string` | `undefined` |
 
 

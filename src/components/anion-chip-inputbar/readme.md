@@ -14,6 +14,7 @@ Chip Inputbar is a combination of a `anion-chip-bar` component with an input fie
 
 | Property           | Attribute           | Description                                | Type     | Default     |
 | ------------------ | ------------------- | ------------------------------------------ | -------- | ----------- |
+| `chipColor`        | `chip-color`        | Color name of the ion-chip components.     | `string` | `'primary'` |
 | `inputPlaceholder` | `input-placeholder` | The placeholder text of the input element. | `string` | `undefined` |
 | `labelText`        | `label-text`        | The text of the associated inputbar label. | `string` | `undefined` |
 

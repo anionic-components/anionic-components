@@ -18,6 +18,11 @@ export class AnionChipInputbar {
   @Event() anionInputChange: EventEmitter;
   
   /**
+   * Color name of the ion-chip components.
+   */
+  @Prop() chipColor: string = 'primary';
+
+  /**
    * The text of the associated inputbar label.
    */
   @Prop() labelText: string;
@@ -128,7 +133,7 @@ export class AnionChipInputbar {
         }
         <div class='anion-chip-inputbar-input-wrapper' 
              onClick={()=>this.handleContainerClick()}>
-          <anion-chip-bar />
+          <anion-chip-bar chip-color={this.chipColor} />
           <input type="text" 
                  placeholder={this.inputPlaceholder ? this.inputPlaceholder : ''} 
                  onInput={(e)=>this.handleInput(e)}/>

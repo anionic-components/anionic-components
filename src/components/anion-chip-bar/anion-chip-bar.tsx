@@ -13,6 +13,11 @@ export class AnionChipBar {
   @Event() anionChipRemoved: EventEmitter;
 
   /**
+   * Color name of the ion-chip components.
+   */
+  @Prop() chipColor: string = 'primary';
+
+  /**
    * Default set of chips to appear in the bar.
    */
   @Prop() defaultChips: string;
@@ -98,7 +103,7 @@ export class AnionChipBar {
     return [
       <div class='anion-chip-bar'>
         { this.chips.map(chip =>
-          <ion-chip>
+          <ion-chip color={this.chipColor}>
             <ion-label>{chip}</ion-label>
             <ion-icon name='close'
                       onClick={()=>this.handleChipCloseClick(chip)} />

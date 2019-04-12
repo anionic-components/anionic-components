@@ -9,5 +9,7 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null // disable service workers
     }
-  ]
+  ],
+  globalScript: 'src/global/app.ts',
+  globalStyle: 'src/global/app.css'
 };

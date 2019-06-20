@@ -1,6 +1,6 @@
 # anion-chat-bubble
 
-Chat Bubble is a combinatino of an avatar and a message associated with the author of a message.
+Chat Bubble is a combination of an avatar and a message associated with the author of a message.
 
 <!-- Auto Generated Below -->
 

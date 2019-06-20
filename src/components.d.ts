@@ -13,6 +13,35 @@ import 'ionicons';
 
 export namespace Components {
 
+  interface AnionChatBubble {
+    /**
+    * The display name associated with the chat message.
+    */
+    'author': string;
+    /**
+    * The side where the avatar should appear.
+    */
+    'avatarSide': 'left' | 'right';
+    /**
+    * The URL for the image source of the avatar.
+    */
+    'avatarUrl': string;
+  }
+  interface AnionChatBubbleAttributes extends StencilHTMLAttributes {
+    /**
+    * The display name associated with the chat message.
+    */
+    'author'?: string;
+    /**
+    * The side where the avatar should appear.
+    */
+    'avatarSide'?: 'left' | 'right';
+    /**
+    * The URL for the image source of the avatar.
+    */
+    'avatarUrl'?: string;
+  }
+
   interface AnionChipBar {
     /**
     * Add a chip to the bar.
@@ -122,15 +151,23 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AnionChatBubble': Components.AnionChatBubble;
     'AnionChipBar': Components.AnionChipBar;
     'AnionChipInputbar': Components.AnionChipInputbar;
   }
 
   interface StencilIntrinsicElements {
+    'anion-chat-bubble': Components.AnionChatBubbleAttributes;
     'anion-chip-bar': Components.AnionChipBarAttributes;
     'anion-chip-inputbar': Components.AnionChipInputbarAttributes;
   }
 
+
+  interface HTMLAnionChatBubbleElement extends Components.AnionChatBubble, HTMLStencilElement {}
+  var HTMLAnionChatBubbleElement: {
+    prototype: HTMLAnionChatBubbleElement;
+    new (): HTMLAnionChatBubbleElement;
+  };
 
   interface HTMLAnionChipBarElement extends Components.AnionChipBar, HTMLStencilElement {}
   var HTMLAnionChipBarElement: {
@@ -145,11 +182,13 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'anion-chat-bubble': HTMLAnionChatBubbleElement
     'anion-chip-bar': HTMLAnionChipBarElement
     'anion-chip-inputbar': HTMLAnionChipInputbarElement
   }
 
   interface ElementTagNameMap {
+    'anion-chat-bubble': HTMLAnionChatBubbleElement;
     'anion-chip-bar': HTMLAnionChipBarElement;
     'anion-chip-inputbar': HTMLAnionChipInputbarElement;
   }

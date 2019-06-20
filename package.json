@@ -1,6 +1,6 @@
 {
   "name": "anionic-components",
-  "version": "0.12.0",
+  "version": "0.12.2",
   "description": "Anionic Components",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@ionic/core": "4.2.0"

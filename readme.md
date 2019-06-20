@@ -10,6 +10,7 @@ The library itself is built using [Stencil](https://stenciljs.com/).
 
 * [Chip Bar](src/components/anion-chip-bar/readme.md)
 * [Chip Inputbar](src/components/anion-chip-inputbar/readme.md)
+* [Chat Bubble](src/components/anion-chat-bubble/readme.md)
 
 # Stencil
 
